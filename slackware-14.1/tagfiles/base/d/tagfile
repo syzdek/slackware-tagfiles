@@ -6,7 +6,7 @@ ccache:SKP
 clisp:SKP
 cmake:SKP
 cscope:SKP
-cvs:REC
+cvs:ADD
 dev86:ADD
 distcc:SKP
 doxygen:SKP
@@ -20,7 +20,7 @@ gcc-java:SKP
 gcc-objc:SKP
 gdb:SKP
 gettext-tools:SKP
-git:REC
+git:ADD
 gperf:SKP
 guile:SKP
 help2man:SKP
@@ -36,14 +36,14 @@ nasm:SKP
 open-cobol:SKP
 oprofile:SKP
 p2c:SKP
-perl:REC
+perl:ADD
 pkg-config:SKP
 pmake:SKP
-python:REC
-rcs:REC
+python:ADD
+rcs:ADD
 ruby:SKP
 slacktrack:SKP
-strace:REC
-subversion:REC
+strace:ADD
+subversion:ADD
 swig:SKP
 yasm:SKP
