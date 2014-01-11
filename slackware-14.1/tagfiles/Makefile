@@ -31,9 +31,9 @@ all: $(PROFILES)
 minimal: Makefile
 	rm -Rf $(@)
 	@for SERIES in $(SERIES_DESKTOP);do mkdir -p $(@)/$${SERIES}; done
-	@for SERIES in $(SERIES_DESKTOP);do cp official/$${SERIES}/tagfile $(@)/$${SERIES}/tagfile;done
+	@for SERIES in $(SERIES_DESKTOP);do cp slackware/$${SERIES}/tagfile $(@)/$${SERIES}/tagfile;done
 	@for SERIES in $(SERIES_DESKTOP);do sed -i '.bak' -e 's/:[ADDRECOPT]\\{1\\}$$/:SKP/g' $(@)/$${SERIES}/tagfile;done
-	@for SERIES in $(SERIES_MINIMAL);do cp official/$${SERIES}/tagfile $(@)/$${SERIES}/tagfile;done
+	@for SERIES in $(SERIES_MINIMAL);do cp slackware/$${SERIES}/tagfile $(@)/$${SERIES}/tagfile;done
 	@for SERIES in $(SERIES_MINIMAL);do sed -i '.bak' -e 's/:REC/:SKP/g' $(@)/$${SERIES}/tagfile;done
 	@for SERIES in $(SERIES_MINIMAL);do sed -i '.bak' -e 's/:OPT/:SKP/g' $(@)/$${SERIES}/tagfile;done
 	rm -f $(@)/*/tagfile.bak
@@ -42,9 +42,9 @@ minimal: Makefile
 server: Makefile
 	rm -Rf $(@)
 	@for SERIES in $(SERIES_DESKTOP);do mkdir -p $(@)/$${SERIES}; done
-	@for SERIES in $(SERIES_DESKTOP);do cp official/$${SERIES}/tagfile $(@)/$${SERIES}/tagfile;done
+	@for SERIES in $(SERIES_DESKTOP);do cp slackware/$${SERIES}/tagfile $(@)/$${SERIES}/tagfile;done
 	@for SERIES in $(SERIES_DESKTOP);do sed -i '.bak' -e 's/:[ADDRECOPT]\\{1\\}$$/:SKP/g' $(@)/$${SERIES}/tagfile;done
-	@for SERIES in $(SERIES_MINIMAL);do cp official/$${SERIES}/tagfile $(@)/$${SERIES}/tagfile;done
+	@for SERIES in $(SERIES_MINIMAL);do cp slackware/$${SERIES}/tagfile $(@)/$${SERIES}/tagfile;done
 	@for SERIES in $(SERIES_MINIMAL);do sed -i '.bak' -e 's/:REC/:ADD/g' $(@)/$${SERIES}/tagfile;done
 	@for SERIES in $(SERIES_MINIMAL);do sed -i '.bak' -e 's/:OPT/:SKP/g' $(@)/$${SERIES}/tagfile;done
 	rm -f $(@)/*/tagfile.bak
@@ -53,7 +53,7 @@ server: Makefile
 required: Makefile
 	rm -Rf $(@)
 	@for SERIES in $(SERIES_DESKTOP);do mkdir -p $(@)/$${SERIES}; done
-	@for SERIES in $(SERIES_DESKTOP);do cp official/$${SERIES}/tagfile $(@)/$${SERIES}/tagfile;done
+	@for SERIES in $(SERIES_DESKTOP);do cp slackware/$${SERIES}/tagfile $(@)/$${SERIES}/tagfile;done
 	@for SERIES in $(SERIES_DESKTOP);do sed -i '.bak' -e 's/:REC/:SKP/g' $(@)/$${SERIES}/tagfile;done
 	@for SERIES in $(SERIES_DESKTOP);do sed -i '.bak' -e 's/:OPT/:SKP/g' $(@)/$${SERIES}/tagfile;done
 	rm -f $(@)/*/tagfile.bak
@@ -62,7 +62,7 @@ required: Makefile
 recommended: Makefile
 	rm -Rf $(@)
 	@for SERIES in $(SERIES_DESKTOP);do mkdir -p $(@)/$${SERIES}; done
-	@for SERIES in $(SERIES_DESKTOP);do cp official/$${SERIES}/tagfile $(@)/$${SERIES}/tagfile;done
+	@for SERIES in $(SERIES_DESKTOP);do cp slackware/$${SERIES}/tagfile $(@)/$${SERIES}/tagfile;done
 	@for SERIES in $(SERIES_DESKTOP);do sed -i '.bak' -e 's/:REC/:ADD/g' $(@)/$${SERIES}/tagfile;done
 	@for SERIES in $(SERIES_DESKTOP);do sed -i '.bak' -e 's/:OPT/:SKP/g' $(@)/$${SERIES}/tagfile;done
 	rm -f $(@)/*/tagfile.bak
@@ -71,7 +71,7 @@ recommended: Makefile
 optional: Makefile
 	rm -Rf $(@)
 	@for SERIES in $(SERIES_DESKTOP);do mkdir -p $(@)/$${SERIES}; done
-	@for SERIES in $(SERIES_DESKTOP);do cp official/$${SERIES}/tagfile $(@)/$${SERIES}/tagfile;done
+	@for SERIES in $(SERIES_DESKTOP);do cp slackware/$${SERIES}/tagfile $(@)/$${SERIES}/tagfile;done
 	@for SERIES in $(SERIES_DESKTOP);do sed -i '.bak' -e 's/:REC/:ADD/g' $(@)/$${SERIES}/tagfile;done
 	@for SERIES in $(SERIES_DESKTOP);do sed -i '.bak' -e 's/:OPT/:ADD/g' $(@)/$${SERIES}/tagfile;done
 	rm -f $(@)/*/tagfile.bak
